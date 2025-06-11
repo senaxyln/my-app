@@ -9,17 +9,23 @@ export default function HomePage() {
           <div
             key={num}
             style={{
-              width: '40px',
-              height: '40px',
+              width: '60px',
+              height: '60px',
               display: 'flex',
+              flexDirection: 'column',
               justifyContent: 'center',
               alignItems: 'center',
-              backgroundColor: 'white',
+              backgroundColor: num % 2 === 0 ? '#e0f7fa' : '#fce4ec',
               borderRadius: '8px',
               boxShadow: '0 1px 4px rgba(0,0,0,0.1)',
+              fontSize: '14px',
+              fontWeight: 'bold',
             }}
           >
-            {num}
+            <div>{num}</div>
+            <div style={{ fontSize: '12px', color: '#555' }}>
+              {num % 2 === 0 ? 'Genap' : 'Ganjil'}
+            </div>
           </div>
         ))}
       </div>
